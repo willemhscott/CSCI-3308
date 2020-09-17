@@ -1,0 +1,18 @@
+Sep 17 13:07:29 henry-VirtualBox snapd[609]: stateengine.go:150: state ensure error: devicemgr: cannot seed: cannot find signatures with metadata for snap "snapd" ("/var/lib/snapd/seed/snaps/snapd_8542.snap")
+Sep 17 13:08:27 henry-VirtualBox systemd-resolved[379]: Server returned error NXDOMAIN, mitigating potential DNS violation DVE-2018-0001, retrying transaction with reduced feature level UDP.
+Sep 17 13:08:27 henry-VirtualBox systemd-resolved[379]: Server returned error NXDOMAIN, mitigating potential DNS violation DVE-2018-0001, retrying transaction with reduced feature level UDP.
+Sep 17 13:12:29 henry-VirtualBox snapd[609]: stateengine.go:150: state ensure error: devicemgr: cannot seed: cannot find signatures with metadata for snap "snapd" ("/var/lib/snapd/seed/snaps/snapd_8542.snap")
+Sep 17 13:17:29 henry-VirtualBox snapd[609]: stateengine.go:150: state ensure error: devicemgr: cannot seed: cannot find signatures with metadata for snap "snapd" ("/var/lib/snapd/seed/snaps/snapd_8542.snap")
+Sep 17 13:22:29 henry-VirtualBox snapd[609]: stateengine.go:150: state ensure error: devicemgr: cannot seed: cannot find signatures with metadata for snap "snapd" ("/var/lib/snapd/seed/snaps/snapd_8542.snap")
+Sep 17 13:27:29 henry-VirtualBox snapd[609]: stateengine.go:150: state ensure error: devicemgr: cannot seed: cannot find signatures with metadata for snap "snapd" ("/var/lib/snapd/seed/snaps/snapd_8542.snap")
+Sep 17 13:32:29 henry-VirtualBox snapd[609]: stateengine.go:150: state ensure error: devicemgr: cannot seed: cannot find signatures with metadata for snap "snapd" ("/var/lib/snapd/seed/snaps/snapd_8542.snap")
+Sep 17 13:37:29 henry-VirtualBox snapd[609]: stateengine.go:150: state ensure error: devicemgr: cannot seed: cannot find signatures with metadata for snap "snapd" ("/var/lib/snapd/seed/snaps/snapd_8542.snap")
+Sep 17 13:42:29 henry-VirtualBox snapd[609]: stateengine.go:150: state ensure error: devicemgr: cannot seed: cannot find signatures with metadata for snap "snapd" ("/var/lib/snapd/seed/snaps/snapd_8542.snap")
+Sep 17 13:47:29 henry-VirtualBox snapd[609]: stateengine.go:150: state ensure error: devicemgr: cannot seed: cannot find signatures with metadata for snap "snapd" ("/var/lib/snapd/seed/snaps/snapd_8542.snap")
+Sep 17 13:52:29 henry-VirtualBox snapd[609]: stateengine.go:150: state ensure error: devicemgr: cannot seed: cannot find signatures with metadata for snap "snapd" ("/var/lib/snapd/seed/snaps/snapd_8542.snap")
+Sep 17 13:57:29 henry-VirtualBox snapd[609]: stateengine.go:150: state ensure error: devicemgr: cannot seed: cannot find signatures with metadata for snap "snapd" ("/var/lib/snapd/seed/snaps/snapd_8542.snap")
+Sep 17 14:02:29 henry-VirtualBox snapd[609]: stateengine.go:150: state ensure error: devicemgr: cannot seed: cannot find signatures with metadata for snap "snapd" ("/var/lib/snapd/seed/snaps/snapd_8542.snap")
+Sep 17 14:05:18 henry-VirtualBox gnome-software[1995]: internal error: failed, but no error code: cancelled
+Sep 17 14:07:29 henry-VirtualBox snapd[609]: stateengine.go:150: state ensure error: devicemgr: cannot seed: cannot find signatures with metadata for snap "snapd" ("/var/lib/snapd/seed/snaps/snapd_8542.snap")
+Sep 17 14:12:29 henry-VirtualBox snapd[609]: stateengine.go:150: state ensure error: devicemgr: cannot seed: cannot find signatures with metadata for snap "snapd" ("/var/lib/snapd/seed/snaps/snapd_8542.snap")
+Sep 17 14:17:29 henry-VirtualBox snapd[609]: stateengine.go:150: state ensure error: devicemgr: cannot seed: cannot find signatures with metadata for snap "snapd" ("/var/lib/snapd/seed/snaps/snapd_8542.snap")
