@@ -190,7 +190,7 @@ function switchPlayers(playerNum) {
     document.getElementById('p_year').innerText = player.year.toString()
     document.getElementById('p_major').innerText = player.major.toString()
     document.getElementById('g_played').innerText = player.games_played.toString()
-    document.getElementById('player_img').innerText = player.img.toString()
+    document.getElementById('player_img').src = player.img.toString()
     document.getElementById('p_yards').innerText = player.pass_yards.toString()
     document.getElementById('r_yards').innerText = player.rushing_yards.toString()
     document.getElementById('rec_yards').innerText = player.receiving_yards.toString()
