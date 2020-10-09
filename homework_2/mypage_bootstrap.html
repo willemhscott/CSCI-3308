@@ -14,6 +14,27 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
             integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
             crossorigin="anonymous"></script>
+    <script>
+        var count;
+        function addtweet(interest) {
+            var tweet = $(`
+            <div class="card" id="card${count}">
+                <div class="card-body">
+                    <h3>Tweet</h3>
+                    <p>This is one cool tweet</p>
+                </div>
+                <a class="btn btn-danger" href="#" onclick="deleteCard('card${count}')">-</a>
+            </div>`
+            );
+            count += 1
+
+            tweet.appendTo(interest)
+        }
+
+        function deleteCard(cid) {
+            document.getElementById(cid).remove()
+        }
+    </script>
 </head>
 <body>
 <nav class="navbar navbar-expand-sm bg-info navbar-dark">
@@ -25,6 +46,9 @@
         </li>
         <li class="nav-item">
             <a class="nav-link" href="projects.html">Projects</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="login.html">Sign Up Modal</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="tic-tac-toe.html">Tic Tac Toe game</a>
@@ -62,7 +86,10 @@
                          alt="Languages">
                     <div class="card-body">
                         <h3>Learning Languages</h3>
-                        <p>Languages are super cool! Learn a language!</p>
+                        <a class="btn btn-info" href="#" onclick="addtweet('#interest1')">+</a>
+                        <div id="interest1">
+
+                        </div>
                     </div>
                 </div>
             </div>
@@ -71,8 +98,12 @@
                     <img class="card-img-top" src="https://miro.medium.com/max/1000/0*kBHpKva09AsGj7RQ" alt="Coding">
                     <div class="card-body">
                         <h3>Writing Code</h3>
-                        <p>I write it because its fun and I like making cool stuff</p>
+                        <a class="btn btn-info" href="#" onclick="addtweet('#interest2')">+</a>
+                        <div id="interest2">
+
+                        </div>
                     </div>
+
                 </div>
             </div>
             <div class="col-sm-4">
@@ -82,7 +113,11 @@
                          alt="Cooking">
                     <div class="card-body">
                         <h3>Making Food</h3>
-                        <p>Its really the eating that I like</p>
+
+                        <a class="btn btn-info" href="#" onclick="addtweet('#interest3')">+</a>
+                        <div id="interest3">
+
+                        </div>
                     </div>
                 </div>
             </div>
