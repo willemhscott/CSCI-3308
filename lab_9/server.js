@@ -122,7 +122,7 @@ app.get('/home', function (req, res) {
 
 app.get('/home/pick_color', function (req, res) {
     var color_choice = req.query.color_selection; // Investigate why the parameter is named "color_selection"
-    var color_options = `select * from favorite_colors where hex_value = '${color_choice}'` // Write a SQL query to retrieve the colors from the database
+    var color_options = `select * from favorite_colors` // Write a SQL query to retrieve the colors from the database
     var color_message = `select color_msg from favorite_colors where hex_value = '${color_choice}'`// Write a SQL query to retrieve the color message for the selected color
     db.task('get-everything', task => {
         return task.batch([
@@ -134,8 +134,8 @@ app.get('/home/pick_color', function (req, res) {
             res.render('pages/home', {
                     my_title: "Home Page",
                     data: info[0],// Return the color options
-                    color: info[0].name, // Return the color choice
-                    color_msg: info[1].color_msg// Return the color message
+                    color: color_choice, // Return the color choice
+                    color_msg: info[1][0].color_msg// Return the color message
                 }
             )
         })
