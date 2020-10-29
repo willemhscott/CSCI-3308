@@ -61,7 +61,7 @@ function readyPage(latitude, longitude) {
 
         */
         document.getElementById("image_today").setAttribute("src", data.current.weather_icons[0])
-        document.getElementById("location").innerHTML = data.location.name
+        document.getElementById("heading").innerHTML = "Today's Weather Forecast - " + data.location.name
         document.getElementById("temp_today").innerHTML = getFarenheitTemp(data.current.temperature)
         document.getElementById("thermometer_inner").setAttribute("innerHeight", getFarenheitTemp(data.current.temperature))
         document.getElementById("precip_today").innerHTML = data.current.precip + "%"
