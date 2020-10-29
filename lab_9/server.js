@@ -122,7 +122,8 @@ app.get('/home', function (req, res) {
 
 app.get('/home/pick_color', function (req, res) {
     var color_choice = req.query.color_selection; // Investigate why the parameter is named "color_selection"
-    var color_options = `select * from favorite_colors` // Write a SQL query to retrieve the colors from the database
+    var color_options = `select *
+                         from favorite_colors` // Write a SQL query to retrieve the colors from the database
     var color_message = `select color_msg from favorite_colors where hex_value = '${color_choice}'`// Write a SQL query to retrieve the color message for the selected color
     db.task('get-everything', task => {
         return task.batch([
@@ -192,11 +193,11 @@ app.get('/team_stats', function (req, res) {
     var get_wincount = `SELECT COUNT(*) AS wins
                         FROM football_games
                         WHERE extract(YEAR FROM game_date) = 2020
-                        AND home_score > visitor_score`
+                          AND home_score > visitor_score`
     var get_losscount = `SELECT COUNT(*) AS losses
                          FROM football_games
                          WHERE extract(YEAR FROM game_date) = 2020
-                        AND home_score < visitor_score`
+                           AND home_score < visitor_score`
 
     db.task('get-everything', task => {
         return task.batch([
@@ -229,7 +230,7 @@ app.get('/team_stats', function (req, res) {
 
 app.get('/player_info', function (req, res) {
     var players = `SELECT name, id
-                     FROM football_players`
+                   FROM football_players`
 
     db.task('get-everything', task => {
         return task.batch([
@@ -240,7 +241,10 @@ app.get('/player_info', function (req, res) {
             res.render('pages/player_info', {
                     my_title: "Team Stats",
                     data: info,
-                    players: info[0]
+                    players: info[0],
+                    img_src: undefined,
+                    playerdata: '',
+                    pgamedata: ''
                 }
             )
         })
@@ -249,6 +253,8 @@ app.get('/player_info', function (req, res) {
             res.render('pages/player_info', {
                 my_title: 'Home Page',
                 data: '',
+                players: '',
+                img_src: undefined
             })
         });
 });
@@ -274,7 +280,8 @@ app.get('/player_info/post', function (req, res) {
                     data: info,
                     players: info[0],
                     playerdata: info[1][0],
-                    pgamedata: info[2]
+                    pgamedata: info[2],
+                    img_src: info[1][0].img_src
                 }
             )
         })
@@ -285,7 +292,8 @@ app.get('/player_info/post', function (req, res) {
                 data: '',
                 players: '',
                 playerdata: '',
-                pgamedata: ''
+                pgamedata: '',
+                img_src: info[1][0].img_src
             })
         });
 });
