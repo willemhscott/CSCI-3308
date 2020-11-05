@@ -119,7 +119,8 @@ function readyPage(latitude, longitude) {
 
         for (let i = 0; i < 5; i++) {
             let day = getKey(i)
-            text += `<div style="width: 20%;">
+            text += `
+        <div style="width: 20%;">
         <div class="card">
           <div class="card-body">
             <h5 class="card-title">${dayOfWeek}</h5>
@@ -129,7 +130,8 @@ function readyPage(latitude, longitude) {
               Sunset: ${day.astro.sunset}</p>
           </div>
         </div>
-      </div>\n`
+      </div>\n
+        `
         }
 
         document.getElementById("5_day_forecast").innerHTML = text;
