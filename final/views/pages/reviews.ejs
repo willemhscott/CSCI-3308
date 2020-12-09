@@ -1,0 +1,28 @@
+<%- include('../partials/header') %>
+<%- include('../partials/menu') %>
+<div class="container">
+    <div class="jumbotron">
+        <h1 class="display-4">Movie Reviews</h1>
+
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Movie</th>
+                <th>Review</th>
+                <th>Review Date</th>
+            </tr>
+            </thead>
+            <tbody>
+            <% for (var i = 0; i < rows.length; i++) { %>
+                <tr>
+                    <td><%= rows[i].movie_title %></td>
+                    <td><%= rows[i].review %></td>
+                    <td><%= rows[i].review_date %></td>
+                </tr>
+            <% } %>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<%- include('../partials/footer') %>

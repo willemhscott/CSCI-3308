@@ -1,0 +1,47 @@
+<%- include('../partials/header') %>
+<%- include('../partials/menu') %>
+<div class="container">
+    <div class="jumbotron" id="movies">
+        <h1 class="display-4">Movies</h1>
+
+    </div>
+</div>
+
+<div class="modal fade" id="reviewModal" tabindex="-1" role="dialog" aria-labelledby="reviewModal"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <form action="/reviews" method="post">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="reviewModal">Add Review</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <div class="form-group row">
+                        <label class="col-sm-5 col-form-label" for="movie_name">Movie Name</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" name="movie_name" id="movie_name"
+                                   value="">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-5 col-form-label" for="movie_review">Enter your review here:</label>
+                        <div class="col-sm-10">
+                            <textarea type="text" class="form-control" name="movie_review" id="movie_review"
+                                      placeholder="My super cool review"> </textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<%- include('../partials/footer') %>
