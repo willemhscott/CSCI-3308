@@ -1,4 +1,4 @@
-let API_BASE = "http://www.omdbapi.com/?i=tt3896198&apikey=d7f309b0"
+let API_BASE = "https://www.omdbapi.com/?i=tt3896198&apikey=d7f309b0"
 
 $('#myModal').on('shown.bs.modal', function () {
     $('#myInput').trigger('focus')

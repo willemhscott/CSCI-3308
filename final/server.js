@@ -22,14 +22,17 @@ let pgp = require('pg-promise')();
  user: This should be left as postgres, the default user account created when PostgreSQL was installed
  password: This the password for accessing the database.  You'll need to set a password USING THE PSQL TERMINAL THIS IS NOT A PASSWORD FOR POSTGRES USER ACCOUNT IN LINUX!
  **********************/
-const dbConfig = {
-    host: '192.168.56.101',
+
+let dbConfig = {
+    host: 'localhost',
     port: 5432,
     database: 'final',
     user: 'postgres',
-    password: 'password'
+    password: 'pwd'
 };
 
+const isProduction = process.env.NODE_ENV === 'production';
+dbConfig = isProduction ? process.env.DATABASE_URL : dbConfig;
 let db = pgp(dbConfig);
 
 // set the view engine to ejs
@@ -94,5 +97,5 @@ app.get('/reviews', function (req, res) {
         });
 });
 
-app.listen(3000);
-console.log('3000 is the magic port');
+app.listen(process.env.PORT || 5000);
+console.log(process.env.PORT || 5000, 'is the magic port');
